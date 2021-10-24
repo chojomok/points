@@ -14,7 +14,7 @@ function validateAdd(transaction) {
 
 function validateSpend(points) {
     const schema = {
-        points: Joi.number().integer().strict().required()
+        points: Joi.number().integer().strict().positive().allow(0).required()
     };
     return Joi.validate(points, schema);
     
