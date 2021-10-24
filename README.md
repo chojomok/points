@@ -1,4 +1,4 @@
-## points
+# points #
 back end service using NodeJS, Express, and Joi
 
 ## Introduction 
@@ -14,22 +14,22 @@ Express: 4.17.1 | npm i express@4.17.1
 Joi: 13.7.0 | npm i joi@13.7.0
 
 
-##Features
+## Features ##
 
-### /api/transactions
-#### GET
+### /api/transactions ###
+#### GET ####
 Will return the history of all the transactions. 
-#### POST
+#### POST ####
 Can send a json object of a transaction. 
 payer, points, and timestamp are required an all have input validation using Joi. 
 
-### /api/spend
-#### POST
+### /api/spend ###
+#### POST ####
 can send a json object of how many points to spend. 
 points has input validation to be a number.
 
-### /api/balance
-#### GET
+### /api/balance ###
+#### GET ####
 Will return the balance of all the payers. 
 
 
