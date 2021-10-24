@@ -1,9 +1,16 @@
+/*
+    Route for transactions
+*/
 const express = require('express');
 const router = express.Router();
 const {validateAdd } = require('../utility');
 const TransactionList = require('../transactionsList');
 const PayerBalance = require('../payerBalance');
 
+/*
+    GET Request: Returns the history of all transactions
+    POST Request: Can add a transaction. Must send a a valid transaction with payer, points, and timestamp.
+*/
 router
     .get('/', (req,res) => {
     res.send(TransactionList);

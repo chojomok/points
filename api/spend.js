@@ -1,10 +1,16 @@
+/*
+    Route for spend
+*/
 const express = require('express');
 const router = express.Router();
 const {validateSpend, getTotalBalance, sortTransactionList } = require('../utility');
 const TransactionList = require('../transactionsList');
 const PayerBalance = require('../payerBalance');
 
-
+/* 
+    POST request. Spends the points in each payer based on timestamp of when the points were added.
+    The payer's balance and the transaction history are all updated. 
+*/
 router.post('/', (req,res) => {
     const {error} = validateSpend(req.body);
     if (error)

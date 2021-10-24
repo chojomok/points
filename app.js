@@ -1,4 +1,6 @@
 // Set up for nodejs, express, and JOI
+// This is just an entry page. The main page redirects you to read the documentation to learn how to use the service.
+// Uses port 8080 by default
 const Joi = require('joi');
 const express = require('express');
 const app = express();

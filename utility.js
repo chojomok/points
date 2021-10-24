@@ -1,3 +1,7 @@
+/*
+    All the functions used for input validation and the post/get request are centralized here. 
+    This is an attempt to be modular in order increase maintainbility and scalability of the service.
+*/
 const Joi = require('joi');
 const TransactionList = require('./transactionsList');
 
@@ -33,8 +37,6 @@ function getTotalBalance(PayerBalance){
     }
     return totalBalance;
 }
-
-
 
 module.exports.validateAdd = validateAdd;
 module.exports.validateSpend = validateSpend;
