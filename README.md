@@ -13,6 +13,12 @@ NodeJS: V10.19.0 | npm i node@10.19.0
 Express: 4.17.1 | npm i express@4.17.1
 Joi: 13.7.0 | npm i joi@13.7.0
 
+Module: Version  | NPM install line
+------------- | -------------
+NodeJS: V10.19.0 | npm i node@10.19.0
+Express: 4.17.1  | npm i express@4.17.1
+Joi: 13.7.0  | npm i joi@13.7.0
+
 ## How to run the service ##
 In your command line or terminal, change directories to where app.js is located. 
 Then run the following line: __node app.js__
