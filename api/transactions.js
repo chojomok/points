@@ -5,10 +5,10 @@ const TransactionList = require('../transactionsList');
 const PayerBalance = require('../payerBalance');
 
 router
-    .get('', (req,res) => {
+    .get('/', (req,res) => {
     res.send(TransactionList);
 })
-    .post('', (req,res) => {
+    .post('/', (req,res) => {
     const {error} = validateAdd(req.body);
     if (error)
         return res.status(400).send(error.details[0].message);
