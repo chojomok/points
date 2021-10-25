@@ -9,8 +9,6 @@ function validateAdd(transaction) {
     const schema = {
         payer: Joi.string().required(),
         points: Joi.number().integer().strict().required(),
-
-        // TODO: checking for iso for now but needs to check for utc
         timestamp: Joi.date().iso().required()
     };
     return Joi.validate(transaction, schema);
