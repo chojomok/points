@@ -32,7 +32,7 @@ Will return the history of all the transactions. </br>
 
 _Get Example_: </br>
 GET http://localhost:8080/api/transactions/ </br>
-Response: ```Code: 200 </br>
+Response: ```Code: 200``` </br>
     [</br>
     {</br>
         "payer": "DANNON", </br>
