@@ -42,6 +42,6 @@ points has input validation to be a number. The points spent are added to the tr
 Will return the balance of all the payers. 
 
 ## Implementation Details ##
-Local memory was used in place of a database. There is an array with all the list of transactions and a dictionary of all the balances of payers.
-The transaction history order is sorted based on time everytime a spend post request is made. 
-The payer balance is updated everytime a post request is made for transactions and everytime points are spent from a payer. 
+Local memory was used in place of a database. There is an array with all the list of transactions and a dictionary of all the balances of payers.</br>
+The transaction history order is sorted based on time everytime a spend post request is made.</br>
+The payer balance is updated everytime a post request is made for transactions and everytime points are spent from a payer.</br>
