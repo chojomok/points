@@ -32,8 +32,8 @@ Will return the history of all the transactions. </br>
 
 _Get Example_: </br>
 GET http://localhost:8080/api/transactions/ </br>
-Response: '''Code: 200''' </br>
-'''[</br>
+Response: ```Code: 200 </br>
+    [</br>
     {</br>
         "payer": "DANNON", </br>
         "points": 1000,</br>
@@ -59,7 +59,7 @@ Response: '''Code: 200''' </br>
         "points": 300,</br>
         "timestamp": "2020-10-31T10:00:00Z"</br>
     }</br>
-]'''</br>
+]```</br>
 
 #### POST ####
 Can send a json object of a transaction. </br>
