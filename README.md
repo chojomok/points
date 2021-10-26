@@ -26,7 +26,6 @@ Then run the following line: </br>
 ## Features ##
 
 ### /api/transactions ###
-
 #### GET ####
 Will return the history of all the transactions. </br>
 
@@ -60,7 +59,6 @@ Response: ```Code: 200``` </br>
         "timestamp": "2020-10-31T10:00:00Z"</br>
     }</br>
 ]</br>
-
 #### POST ####
 Can send a json object of a transaction. </br>
 payer, points, and timestamp are required an all have input validation using Joi. 
@@ -77,15 +75,19 @@ Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 
 
 ### /api/spend ###
-
 #### POST ####
 Can send a json object of how many points to spend. </br>
 points has input validation to be a number. The points spent are added to the transaction history with the timestamp of when the post request was completed. 
 
 ### /api/balance ###
-
 #### GET ####
 Will return the balance of all the payers. 
+GET http://localhost:8080/api/balance/ </br>
+Response: ```Code: 200 {
+    "DANNON": 1100,
+    "UNILEVER": 200,
+    "MILLER COORS": 10000
+}``` </br>
 
 ## Implementation Details ##
 Local memory was used in place of a database. There is an array with all the list of transactions and a dictionary of all the balances of payers.</br>
