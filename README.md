@@ -11,13 +11,14 @@ Here are the following versions and the command line needed to install the modul
 
 Module: Version  | NPM install line
 ------------- | -------------
-NodeJS: V10.19.0 | npm i node@10.19.0
-Express: 4.17.1  | npm i express@4.17.1
-Joi: 13.7.0  | npm i joi@13.7.0
+NodeJS: V10.19.0 | ```npm i node@10.19.0```
+Express: 4.17.1  | ```npm i express@4.17.1```
+Joi: 13.7.0  | ```npm i joi@13.7.0```
 
 ## How to run the service ##
 In your command line or terminal, change directories to where app.js is located. 
-Then run the following line: __node app.js__
+Then run the following line: 
+```node app.js```
 
 ## Features ##
 
