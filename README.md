@@ -18,7 +18,7 @@ NodeJS: V10.19.0 | ```npm i node@10.19.0```
 Express: 4.17.1  | ```npm i express@4.17.1```
 Joi: 13.7.0  | ```npm i joi@13.7.0```
 
-Alternatively, after you have npm installed, you can run ```npm install``` in the root directory of the project to install all the packages defined in package.json.
+Alternatively, after you have npm installed, you can run ```npm install``` in the package directory of the project to install all the packages defined in package.json.
 
 ## How to run the service ##
 In your command line or terminal, change directories to where app.js is located. </br>
