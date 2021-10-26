@@ -10,7 +10,7 @@ The NodeJS, Express, and Joi can can all be installed using NPM.
 Here are the following versions and the command line needed to install the module.
 
 #### How to install NPM ###
-Follow the directions from this [NPM documentation | https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm] relevant to your operating system
+Follow the directions from this [NPM documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm) relevant to your operating system
 
 Module: Version  | NPM install line
 ------------- | -------------
