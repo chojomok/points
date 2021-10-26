@@ -59,7 +59,7 @@ Response: ```Code: 200``` </br>
         "points": 300,</br>
         "timestamp": "2020-10-31T10:00:00Z"</br>
     }</br>
-]```</br>
+]</br>
 
 #### POST ####
 Can send a json object of a transaction. </br>
@@ -67,13 +67,13 @@ payer, points, and timestamp are required an all have input validation using Joi
 
 _Good Post Example_: </br>
 POST http://localhost:8080/api/transactions/ </br>
-Input: '''{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''''
-Response: '''Code: 200 { "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''' </br>
+Input: ```{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }```
+Response: ```Code: 200 { "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }``` </br>
 
 _Bad Post Example_: </br>
 POST http://localhost:8080/api/transactions/ </br>
-Input: '''{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''''
-Response: '''Code: 400 "payer" is not allowed to be empty''' </br>
+Input: ```{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }```
+Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 
 
 ### /api/spend ###
