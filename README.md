@@ -78,6 +78,19 @@ Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 #### POST ####
 Can send a json object of how many points to spend. </br>
 points has input validation to be a number. The points spent are added to the transaction history with the timestamp of when the post request was completed. 
+_Good Post Example_: </br>
+POST http://localhost:8080/api/spend/{</br>
+Input: ```{"points": 5000}```
+Response: ```Code: 200 {
+    "DANNON": -100,
+    "UNILEVER": -200,
+    "MILLER COORS": -4700
+}``` </br>
+
+_Bad Post Example_: </br>
+POST http://localhost:8080/api/spend/ </br>
+Input: ```{"points": -1000}```
+Response: ```Code: 400 "points" must be a positive number``` </br>
 
 ### /api/balance ###
 #### GET ####
