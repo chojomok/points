@@ -80,7 +80,7 @@ POST http://localhost:8080/api/transactions/ </br>
 Input: ```{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }``` </br>
 Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 
-
+***
 ### /api/spend ###
 #### POST ####
 Can send a json object of how many points to spend. </br>
@@ -98,7 +98,7 @@ _Bad Post Example_: </br>
 POST http://localhost:8080/api/spend/ </br>
 Input: ```{"points": -1000}``` </br>
 Response: ```Code: 400 "points" must be a positive number``` </br>
-
+***
 ### /api/balance ###
 #### GET ####
 Will return the balance of all the payers. 
