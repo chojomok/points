@@ -28,19 +28,62 @@ Then run the following line: </br>
 ### /api/transactions ###
 
 #### GET ####
-Will return the history of all the transactions. 
+Will return the history of all the transactions. </br>
+
+_Get Example_: </br>
+GET http://localhost:8080/api/transactions/ </br>
+Response: '''Code: 200''' </br>
+'''[</br>
+    {</br>
+        "payer": "DANNON", </br>
+        "points": 1000,</br>
+        "timestamp": "2020-11-02T14:00:00Z"</br>
+    },</br>
+    {</br>
+        "payer": "UNILEVER",</br>
+        "points": 200,</br>
+        "timestamp": "2020-10-31T11:00:00Z"</br>
+    },</br>
+    {</br>
+        "payer": "DANNON",</br>
+        "points": -200,</br>
+        "timestamp": "2020-10-31T15:00:00Z"</br>
+    },</br>
+    {</br>
+        "payer": "MILLER COORS",</br>
+        "points": 10000,</br>
+        "timestamp": "2020-11-01T14:00:00Z"</br>
+    },</br>
+    {</br>
+        "payer": "DANNON",</br>
+        "points": 300,</br>
+        "timestamp": "2020-10-31T10:00:00Z"</br>
+    }</br>
+]'''</br>
 
 #### POST ####
 Can send a json object of a transaction. </br>
 payer, points, and timestamp are required an all have input validation using Joi. 
 
+_Good Post Example_: </br>
+POST http://localhost:8080/api/transactions/ </br>
+Input: '''{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''''
+Response: '''Code: 200 { "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''' </br>
+
+_Bad Post Example_: </br>
+POST http://localhost:8080/api/transactions/ </br>
+Input: '''{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }''''
+Response: '''Code: 400 "payer" is not allowed to be empty''' </br>
+
+
 ### /api/spend ###
 
 #### POST ####
-can send a json object of how many points to spend. </br>
+Can send a json object of how many points to spend. </br>
 points has input validation to be a number. The points spent are added to the transaction history with the timestamp of when the post request was completed. 
 
 ### /api/balance ###
+
 #### GET ####
 Will return the balance of all the payers. 
 
