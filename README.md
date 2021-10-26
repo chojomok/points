@@ -1,5 +1,5 @@
 # points #
-back end service using NodeJS, Express, and Joi
+back end service using NodeJS, Express, and Joi.
 
 ## Introduction ##
 *What is this?*
@@ -10,13 +10,15 @@ The NodeJS, Express, and Joi can can all be installed using NPM.
 Here are the following versions and the command line needed to install the module.
 
 #### How to install NPM ###
-Follow the directions from this [NPM documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm) relevant to your operating system
+Follow the directions from this [NPM documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm) relevant to your operating system.
 
 Module: Version  | NPM install line
 ------------- | -------------
 NodeJS: V10.19.0 | ```npm i node@10.19.0```
 Express: 4.17.1  | ```npm i express@4.17.1```
 Joi: 13.7.0  | ```npm i joi@13.7.0```
+
+Alternatively, after you have npm installed, you can run ```npm install``` in the root directory of the project to install all the packages defined in package.json.
 
 ## How to run the service ##
 In your command line or terminal, change directories to where app.js is located. </br>
@@ -32,45 +34,50 @@ Will return the history of all the transactions. </br>
 _Get Example_: </br>
 GET http://localhost:8080/api/transactions/ </br>
 Response: ```Code: 200``` </br>
-    [</br>
-    {</br>
-        "payer": "DANNON", </br>
-        "points": 1000,</br>
-        "timestamp": "2020-11-02T14:00:00Z"</br>
-    },</br>
-    {</br>
-        "payer": "UNILEVER",</br>
-        "points": 200,</br>
-        "timestamp": "2020-10-31T11:00:00Z"</br>
-    },</br>
-    {</br>
-        "payer": "DANNON",</br>
-        "points": -200,</br>
-        "timestamp": "2020-10-31T15:00:00Z"</br>
-    },</br>
-    {</br>
-        "payer": "MILLER COORS",</br>
-        "points": 10000,</br>
-        "timestamp": "2020-11-01T14:00:00Z"</br>
-    },</br>
-    {</br>
-        "payer": "DANNON",</br>
-        "points": 300,</br>
-        "timestamp": "2020-10-31T10:00:00Z"</br>
-    }</br>
-]</br>
+ ```
+ [
+    {
+        "payer": "DANNON",
+        "points": 1000,
+        "timestamp": "2020-11-02T14:00:00Z"
+    },
+    {
+        "payer": "UNILEVER",
+        "points": 200,
+        "timestamp": "2020-10-31T11:00:00Z"
+    },
+    {
+        "payer": "DANNON",
+        "points": -200,
+        "timestamp": "2020-10-31T15:00:00Z"
+    },
+    {
+        "payer": "MILLER COORS",
+        "points": 10000,
+        "timestamp": "2020-11-01T14:00:00Z"
+    },
+    {
+        "payer": "DANNON",
+        "points": 300,
+        "timestamp": "2020-10-31T10:00:00Z"
+    }
+]
+```
+
+</br>
+
 #### POST ####
 Can send a json object of a transaction. </br>
 payer, points, and timestamp are required an all have input validation using Joi. 
 
 _Good Post Example_: </br>
 POST http://localhost:8080/api/transactions/ </br>
-Input: ```{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }```
+Input: ```{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }``` </br>
 Response: ```Code: 200 { "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }``` </br>
 
 _Bad Post Example_: </br>
 POST http://localhost:8080/api/transactions/ </br>
-Input: ```{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }```
+Input: ```{ "payer": "", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }``` </br>
 Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 
 
@@ -79,8 +86,8 @@ Response: ```Code: 400 "payer" is not allowed to be empty``` </br>
 Can send a json object of how many points to spend. </br>
 points has input validation to be a number. The points spent are added to the transaction history with the timestamp of when the post request was completed. 
 _Good Post Example_: </br>
-POST http://localhost:8080/api/spend/{</br>
-Input: ```{"points": 5000}```
+POST http://localhost:8080/api/spend/ </br>
+Input: ```{"points": 5000}``` </br>
 Response: ```Code: 200 {
     "DANNON": -100,
     "UNILEVER": -200,
@@ -89,7 +96,7 @@ Response: ```Code: 200 {
 
 _Bad Post Example_: </br>
 POST http://localhost:8080/api/spend/ </br>
-Input: ```{"points": -1000}```
+Input: ```{"points": -1000}``` </br>
 Response: ```Code: 400 "points" must be a positive number``` </br>
 
 ### /api/balance ###
