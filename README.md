@@ -1,9 +1,9 @@
 # points #
-back end service using NodeJS, Express, and Joi.
+backend service using NodeJS, Express, and Joi.
 
 ## Introduction ##
 *What is this?*
-This is a backend services implemented using NodeJS, Express, and Joi. This back end service defaults to using port 8080.
+This is a backend service implemented using NodeJS, Express, and Joi. This back end service defaults to using port 8080.
 
 ## Installing modules ##
 The NodeJS, Express, and Joi can can all be installed using NPM. 
